@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chaos Button — a fast, playful reflex game about adapting under pressure." />
+  <title>Chaos Button — Survive the chaos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <main class="app-shell" id="app-shell">
+    <section class="screen start-screen" id="start-screen" aria-labelledby="start-title">
+      <div class="brand-lockup">
+        <span class="eyebrow"><span class="pulse-dot"></span> Reflex arcade / 30 seconds</span>
+        <h1 id="start-title">CHAOS<span>BUTTON</span></h1>
+        <p>How long can you survive the chaos?</p>
+      </div>
+      <div class="start-card">
+        <div class="button-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+        <button class="primary-button" id="start-button" type="button">
+          <span>Start chaos</span><b>↗</b>
+        </button>
+        <div class="instruction-line">Tap the button <span class="slash">/</span> Adapt fast</div>
+      </div>
+      <div class="start-footer"><span>Built for quick fingers</span><span class="footer-rule"></span><span>Every run is different</span></div>
+    </section>
+
+    <section class="screen game-screen hidden" id="game-screen" aria-labelledby="game-title">
+      <header class="game-header">
+        <div class="game-brand"><span class="brand-mark">✳</span><span id="game-title">CHAOS<br><strong>BUTTON</strong></span></div>
+        <div class="header-actions">
+          <button class="icon-button" id="sound-toggle" type="button" aria-label="Mute sound" title="Toggle sound"><span id="sound-icon">◖))</span></button>
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme"><span id="theme-icon">☼</span></button>
+        </div>
+      </header>
+
+      <div class="stats-grid" aria-live="polite">
+        <div class="stat-card score-card"><span class="stat-label">Score</span><strong id="score-value">0000</strong><span class="stat-accent"></span></div>
+        <div class="stat-card"><span class="stat-label">Level</span><strong id="level-value">01</strong><span class="stat-sub" id="level-name">CALM</span></div>
+        <div class="stat-card"><span class="stat-label">Combo</span><strong id="combo-value">x1</strong><span class="stat-sub combo-sub" id="combo-status">Build it up</span></div>
+        <div class="stat-card timer-card"><span class="stat-label">Time left</span><strong id="time-value">30.0</strong><div class="timer-track"><span id="timer-bar"></span></div></div>
+        <div class="best-score"><span>Best run</span><strong id="best-value">0000</strong></div>
+      </div>
+
+      <div class="arena-wrap">
+        <div class="arena" id="arena" aria-label="Chaos game area">
+          <div class="arena-grid" aria-hidden="true"></div>
+          <div class="arena-noise" aria-hidden="true"></div>
+          <div class="level-banner" id="level-banner" aria-live="assertive"></div>
+          <div class="target-hint" id="target-hint">TAP THE CORE</div>
+          <button class="chaos-button" id="chaos-button" type="button" aria-label="Click the chaos button"><span class="button-shine"></span><span id="chaos-label">CLICK ME</span><small id="button-points">+1</small></button>
+          <div class="fake-button" id="fake-button" role="button" tabindex="0" aria-label="Distractor button">DON'T</div>
+          <div class="event-toast" id="event-toast" aria-live="polite"></div>
+          <div class="combo-pop" id="combo-pop"></div>
+          <div class="particle-layer" id="particle-layer" aria-hidden="true"></div>
+        </div>
+      </div>
+      <footer class="game-footer"><span>Click or tap the core</span><span id="event-status">The calm before the storm</span><button class="text-button" id="quit-button" type="button">Quit run</button></footer>
+    </section>
+
+    <section class="screen game-over-screen hidden" id="game-over-screen" aria-labelledby="over-title">
+      <div class="over-kicker"><span class="pulse-dot"></span> Run complete</div>
+      <h2 id="over-title">CHAOS<br><em>CONTAINED.</em></h2>
+      <p class="over-copy" id="over-copy">You kept your cool. Mostly.</p>
+      <div class="result-card">
+        <div><span>Final score</span><strong id="final-score">0000</strong></div>
+        <div><span>Peak combo</span><strong id="final-combo">x1</strong></div>
+        <div><span>Level reached</span><strong id="final-level">01</strong></div>
+      </div>
+      <div class="new-record hidden" id="new-record"><span>✦</span> New high score</div>
+      <button class="primary-button" id="again-button" type="button"><span>Play again</span><b>↗</b></button>
+      <button class="text-button return-button" id="home-button" type="button">Back to start</button>
+    </section>
+  </main>
+  <div class="sr-only" id="live-region" aria-live="assertive"></div>
+  <script src="script.js"></script>
+</body>
+</html>
