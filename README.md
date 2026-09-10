@@ -44,11 +44,6 @@ HTML • CSS • JavaScript
 
 No frameworks or backend — just a simple standalone web project.
 
-## 🚀 Run It
+## 🎥 Demo
 
-Download the project and open `index.html` in a browser.
-
-Or run:
-
-```bash
-python3 -m http.server 8080
+Watch the screen recording - (https://drive.google.com/drive/folders/1_Q71Aqk3Zi1knYdB2mQPMYR6HZ6oCfkC)
