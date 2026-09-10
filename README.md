@@ -36,13 +36,17 @@ The game runs for **30 seconds**. Your goal is simply to get the highest score y
 - Dark/light theme
 - High-score saving
 - Responsive design for different screens
-- A few hidden surprises 👀
+- A few hidden surprises
 
 ## 🛠️ Built With
 
 HTML • CSS • JavaScript
 
 No frameworks or backend — just a simple standalone web project.
+
+## 🌐 Try It Out yourself
+
+Here you go - 
 
 ## 🎥 Demo
 
